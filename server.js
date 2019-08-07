@@ -2,11 +2,8 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const sequelize = require("sequelize");
-
-const db = require("./models");
-
-const taskAPI = require("./routes/task-api-routes");
+const mongoose = require("mongoose");
+const routes = require("./routes");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -16,12 +13,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(taskAPI)
-
 // Define API routes here
-require("./routes/html-routes.js")(app);
-require("./routes/author-api-routes.js")(app);
+app.use(routes);
 
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/reservationinfo"
+);
 
 // Send every other request to the React app
 // Define any API routes before this runs
