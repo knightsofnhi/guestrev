@@ -1,10 +1,30 @@
 import React, { Component } from "react";
 
 class RevTable extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      guestRev: [],
+    }
+  }
+
+  componentDidMount() {
+    fetch("/api/revenue")
+    .then(results => {
+      // console.log(results);
+      return results.json();
+    }).then(data => {
+      console.log(data);
+
+    this.setState({guestRev: data});
+    console.log("state", this.state.guestRev);
+  });
+}
   render() {
     return(
-      <table class="table">
-        <thead class="thead-dark">
+      <table className="table">
+        <thead className="thead-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Company</th>

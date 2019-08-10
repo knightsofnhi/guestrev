@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reservationinfo"
+  process.env.MONGODB_URI || "mongodb://localhost/revenueinfo"
 );
 
 // Send every other request to the React app

@@ -1,3 +1,3 @@
 module.exports = {
-  Reservation: require("./reservation")
+  Revenue: require("./revenue")
 };
