@@ -10,7 +10,7 @@ class RevTable extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/revenue")
+    fetch("http://localhost:3000/api/revenue")
     .then(results => {
       // console.log(results);
       return results.json();
