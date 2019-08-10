@@ -1,28 +1,31 @@
 import React, { Component } from "react";
 
 class RevTable extends Component {
-
   constructor() {
     super();
     this.state = {
-      guestRev: [],
-    }
+      guestRev: []
+    };
   }
 
   componentDidMount() {
     fetch("http://localhost:3000/api/revenue")
-    .then(results => {
-      // console.log(results);
-      return results.json();
-    }).then(data => {
-      console.log(data);
+      .then(results => {
+        // console.log(results);
+        return results.json();
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ guestRev: data });
+        console.log("state", this.state.guestRev);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
-    this.setState({guestRev: data});
-    console.log("state", this.state.guestRev);
-  });
-}
   render() {
-    return(
+    return (
       <table className="table">
         <thead className="thead-dark">
           <tr>
@@ -35,15 +38,12 @@ class RevTable extends Component {
         <tbody>
           <tr>
             <th scope="row">1</th>
-       
           </tr>
           <tr>
             <th scope="row">2</th>
-     
           </tr>
           <tr>
             <th scope="row">3</th>
-
           </tr>
         </tbody>
       </table>
