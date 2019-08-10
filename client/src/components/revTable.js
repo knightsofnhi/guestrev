@@ -36,15 +36,15 @@ class RevTable extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-          </tr>
+          {this.state.guestRev.map(({ id, company, property, task }) => {
+            return (
+              <tr key={id}>
+                <td>{company}</td>
+                <td>{property}</td>
+                <td>{task}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     );
