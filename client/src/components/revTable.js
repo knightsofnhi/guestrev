@@ -4,14 +4,9 @@ class RevTable extends Component {
   constructor() {
     super();
     this.state = {
-      guestRev: [],
-      field: ""
+      guestRev: []
     };
   }
-
-  handleInputChange = e => {
-    this.setState({ field: e.target.value });
-  };
 
   componentDidMount() {
     fetch("http://localhost:3000/api/revenue")
@@ -44,15 +39,9 @@ class RevTable extends Component {
           {this.state.guestRev.map(({ id, company, property, task }) => {
             return (
               <tr key={id}>
-                <td>
-                  <input onChange={this.handleInputChange} value={company} />
-                </td>
-                <td>
-                  <input onChange={this.handleInputChange} value={property} />
-                </td>
-                <td>
-                  <input onChange={this.handleInputChange} value={task} />
-                </td>
+                <td>{company}</td>
+                <td>{property}</td>
+                <td>{task}</td>
               </tr>
             );
           })}
