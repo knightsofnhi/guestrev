@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import RevField from "./revField";
 
 class RevTable extends Component {
   constructor() {
@@ -10,6 +11,7 @@ class RevTable extends Component {
   }
 
   handleInputChange = e => {
+    console.log(this.state.field);
     this.setState({ field: e.target.value });
   };
 
@@ -43,17 +45,14 @@ class RevTable extends Component {
         <tbody>
           {this.state.guestRev.map(({ id, company, property, task }) => {
             return (
-              <tr key={id}>
-                <td>
-                  <input onChange={this.handleInputChange} value={company} />
-                </td>
-                <td>
-                  <input onChange={this.handleInputChange} value={property} />
-                </td>
-                <td>
-                  <input onChange={this.handleInputChange} value={task} />
-                </td>
-              </tr>
+              <RevField
+                id={id}
+                company={company}
+                property={property}
+                task={task}
+                handleInputChange={this.handleInputChange}
+                field={this.field}
+              />
             );
           })}
         </tbody>
