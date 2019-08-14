@@ -4,13 +4,22 @@ function RevField(props) {
   return (
     <tr key={props.id}>
       <td>
-        <input onChange={props.handleInputChange} value={props.company} />
+        <input
+          onChange={props.handleInputChange("company", props.dataIndex)}
+          value={props.company}
+        />
       </td>
       <td>
-        <input onChange={props.handleInputChange} value={props.property} />
+        <input
+          onChange={props.handleInputChange("property", props.dataIndex)}
+          value={props.property}
+        />
       </td>
       <td>
-        <input onChange={props.handleInputChange} value={props.task} />
+        <input
+          onChange={props.handleInputChange("task", props.dataIndex)}
+          value={props.task}
+        />
       </td>
     </tr>
   );

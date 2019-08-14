@@ -5,14 +5,16 @@ class RevTable extends Component {
   constructor() {
     super();
     this.state = {
-      guestRev: [],
-      field: ""
+      guestRev: []
     };
   }
 
-  handleInputChange = e => {
-    console.log(this.state.field);
-    this.setState({ field: e.target.value });
+  handleInputChange = (category, index) => e => {
+    const updatedGuestRev = [...this.state.guestRev];
+
+    updatedGuestRev[index][category] = e.target.value;
+
+    this.setState({ guestRev: updatedGuestRev });
   };
 
   componentDidMount() {
@@ -43,15 +45,15 @@ class RevTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.guestRev.map(({ id, company, property, task }) => {
+          {this.state.guestRev.map(({ id, company, property, task }, index) => {
             return (
               <RevField
+                dataIndex={index}
                 id={id}
                 company={company}
                 property={property}
                 task={task}
                 handleInputChange={this.handleInputChange}
-                field={this.field}
               />
             );
           })}
