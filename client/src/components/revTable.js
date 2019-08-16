@@ -47,22 +47,6 @@ class RevTable extends Component {
         <tbody>
           {this.state.guestRev.map(({ id, company, property, task }, index) => {
             return (
-<<<<<<< HEAD
-              <RevField
-                dataIndex={index}
-                id={id}
-                company={company}
-                property={property}
-                task={task}
-                handleInputChange={this.handleInputChange}
-              />
-||||||| merged common ancestors
-              <tr key={id}>
-                <td>{company}</td>
-                <td>{property}</td>
-                <td>{task}</td>
-              </tr>
-=======
 
               <RevField
                 dataIndex={index}
@@ -72,7 +56,6 @@ class RevTable extends Component {
                 task={task}
                 handleInputChange={this.handleInputChange}
               />
->>>>>>> 8a3507d5afa23bbe13059b98470705009f31151e
             );
           })}
         </tbody>
