@@ -47,6 +47,7 @@ class RevTable extends Component {
         <tbody>
           {this.state.guestRev.map(({ id, company, property, task }, index) => {
             return (
+
               <RevField
                 dataIndex={index}
                 id={id}
