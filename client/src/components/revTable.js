@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import RevField from "./revField";
 
 class RevTable extends Component {
   constructor() {
@@ -7,6 +8,14 @@ class RevTable extends Component {
       guestRev: []
     };
   }
+
+  handleInputChange = (category, index) => e => {
+    const updatedGuestRev = [...this.state.guestRev];
+
+    updatedGuestRev[index][category] = e.target.value;
+
+    this.setState({ guestRev: updatedGuestRev });
+  };
 
   componentDidMount() {
     fetch("http://localhost:3000/api/revenue")
@@ -36,13 +45,17 @@ class RevTable extends Component {
           </tr>
         </thead>
         <tbody>
-          {this.state.guestRev.map(({ id, company, property, task }) => {
+          {this.state.guestRev.map(({ id, company, property, task }, index) => {
             return (
-              <tr key={id}>
-                <td>{company}</td>
-                <td>{property}</td>
-                <td>{task}</td>
-              </tr>
+
+              <RevField
+                dataIndex={index}
+                id={id}
+                company={company}
+                property={property}
+                task={task}
+                handleInputChange={this.handleInputChange}
+              />
             );
           })}
         </tbody>
