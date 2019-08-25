@@ -1,3 +1,4 @@
 module.exports = {
-  Revenue: require("./revenue")
+  Revenue: require("./revenue"),
+  User: require("./user")
 };

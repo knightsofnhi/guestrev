@@ -38,7 +38,6 @@ class RevTable extends Component {
       <table className="table">
         <thead className="thead-dark">
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Company</th>
             <th scope="col">Property</th>
             <th scope="col">Task</th>
