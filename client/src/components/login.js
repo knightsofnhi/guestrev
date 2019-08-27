@@ -14,7 +14,12 @@ function Login(props) {
     widget = (
       <div>
         <input id="userEmail" name="email" placeholder="Email"></input>
-        <input id="userPassword" name="password" placeholder="Password"></input>
+        <input
+          id="userPassword"
+          name="password"
+          type="password"
+          placeholder="Password"
+        ></input>
         <button onClick={() => extractLoginInfoAndCallParent(props.onLogin)}>
           Login!
         </button>
@@ -29,6 +34,7 @@ function Login(props) {
       </div>
     );
   }
+
   return widget;
 }
 

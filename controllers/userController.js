@@ -7,7 +7,7 @@ class UserController {
       .catch(err => res.status(422).json(err));
   };
 
-  authWithPass = (req, res) => {
+  authWithPassword = (req, res) => {
     db.User.findOne({ email: req.body.email })
       .then(dbModel => {
         if (req.body.password && req.body.password === dbModel.password) {

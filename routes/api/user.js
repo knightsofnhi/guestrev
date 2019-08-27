@@ -6,6 +6,6 @@ const userController = new UserController();
 
 router.route("/").post(userController.create);
 
-router.route("/auth").post(userController.authWithPass);
+router.route("/auth").post(userController.authWithPassword);
 
 module.exports = router;
