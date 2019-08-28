@@ -12,9 +12,15 @@ class RevTable extends Component {
 
   handleInputChange = (category, index) => e => {
     const updatedGuestRev = [...this.state.guestRev];
-
-    updatedGuestRev[index][category] = e.target.value;
-
+    if (category === "completed") {
+      if (updatedGuestRev[index][category] === false) {
+        updatedGuestRev[index][category] = true;
+      } else {
+        updatedGuestRev[index][category] = false;
+      }
+    } else {
+      updatedGuestRev[index][category] = e.target.value;
+    }
     this.setState({ guestRev: updatedGuestRev });
   };
 
@@ -47,22 +53,28 @@ class RevTable extends Component {
           <tr>
             <th scope="col">Company</th>
             <th scope="col">Property</th>
+            <th scope="col">Completed?</th>
             <th scope="col">Task</th>
+            <th scope="col">Price</th>
           </tr>
         </thead>
         <tbody>
-          {this.state.guestRev.map(({ id, company, property, task }, index) => {
-            return (
-              <RevField
-                dataIndex={index}
-                id={id}
-                company={company}
-                property={property}
-                task={task}
-                handleInputChange={this.handleInputChange}
-              />
-            );
-          })}
+          {this.state.guestRev.map(
+            ({ id, company, property, completed, task, price }, index) => {
+              return (
+                <RevField
+                  dataIndex={index}
+                  id={id}
+                  company={company}
+                  property={property}
+                  completed={completed}
+                  task={task}
+                  price={price}
+                  handleInputChange={this.handleInputChange}
+                />
+              );
+            }
+          )}
         </tbody>
         <input type="submit" value="Update Data" onClick={this.updateData} />
       </table>
