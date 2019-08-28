@@ -29,7 +29,6 @@ function RevField(props) {
         />
       </td>
       <td>
-        $
         <input
           onChange={props.handleInputChange("price", props.dataIndex)}
           value={props.price}
