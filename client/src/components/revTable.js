@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RevField from "./revField";
+import API from "../utils/API";
 
 class RevTable extends Component {
   constructor() {
@@ -15,6 +16,12 @@ class RevTable extends Component {
     updatedGuestRev[index][category] = e.target.value;
 
     this.setState({ guestRev: updatedGuestRev });
+  };
+
+  updateData = e => {
+    e.preventDefault();
+    API.saveData(this.state.guestRev);
+    console.log("updateData");
   };
 
   componentDidMount() {
@@ -38,7 +45,6 @@ class RevTable extends Component {
       <table className="table">
         <thead className="thead-dark">
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Company</th>
             <th scope="col">Property</th>
             <th scope="col">Task</th>
@@ -58,6 +64,7 @@ class RevTable extends Component {
             );
           })}
         </tbody>
+        <input type="submit" value="Update Data" onClick={this.updateData} />
       </table>
     );
   }
