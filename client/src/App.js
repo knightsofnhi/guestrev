@@ -5,10 +5,10 @@ import "./App.css";
 import NavBar from "../src/components/navBar";
 import logo from './logo.svg';
 import {HashRouter, Route, Link, Redirect} from 'react-router-dom';
-import Login from './components/Login'
-import Register from './components/Register'
+import Login from './components/Login';
+import Register from './components/Register';
 import {firebaseApp} from './Firebase';
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard';
 
 class App extends Component {
     constructor() {
@@ -45,8 +45,10 @@ class App extends Component {
         this.removeFirebaseEvent()
     }
 
+
     render() {
         return (
+         
             <HashRouter>
                 <div className="App">
                     <div className="App-header">
@@ -85,7 +87,7 @@ class App extends Component {
                         <Route path='/dashboard'
                                render={()=>this.state.authed ?
                                    <Dashboard userid={this.state.userid} email={this.state.email}/> :
-                                   <Redirect to='/login'/>}/>
+                                   <Redirect to='/login'/>} />
                         <Route path='/register' component={Register}/>
                     </div>
 

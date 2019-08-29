@@ -1,16 +1,13 @@
-/**
- * Created by bikramkawan on 9/1/17.
- */
 import * as firebase from 'firebase';
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyARRzTNYiRVE4DH8CKpM_GoB9bJPFRbIYc",
-    authDomain: "react-auth-c10ad.firebaseapp.com",
-    databaseURL: "https://react-auth-c10ad.firebaseio.com",
-    projectId: "react-auth-c10ad",
+    apiKey: "AIzaSyDlG_2mmn3G-piZe_a7sT1P0gnNR2M-izI",
+    authDomain: "guestrev-pro.firebaseapp.com",
+    databaseURL: "https://guestrev-pro.firebaseio.com",
+    projectId: "guestrev-pro",
     storageBucket: "",
-    messagingSenderId: "154377850617"
+    messagingSenderId: "1057687592034"
 };
 export const firebaseApp = firebase.initializeApp(config);
 export const users = firebaseApp.database().ref().child('users');

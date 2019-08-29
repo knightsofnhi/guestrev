@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {usersWishlist} from '../Firebase';
+import RevTable from './revTable';
 // const firebase = require('firebase/app');
 // require('firebase/firebase');
 
@@ -68,7 +69,7 @@ class Dashboard extends Component {
 
             <div className="container" style={{margin: '5%'}}>
                 <div className="row">
-                    <div className="col-md-6">
+                    {/* <div className="col-md-6">
                         <div className="form-group">
                             <input className="form-control"
                                    placeholder="What is your Wishlist ?"
@@ -79,14 +80,15 @@ class Dashboard extends Component {
                                     onClick={this.addWishlist}
                             >Add To Wishlist
                             </button>
-                        </div>
-                    </div>
-                    <div className="col-md-6">
+                        </div> */}
+                    {/* </div> */}
+                    {/* <div className="col-md-6">
                         <ul className="list-group">
                             {this.renderWishlist()}
 
                         </ul>
-                    </div>
+                    </div> */}
+                    <RevTable/>
                 </div>
 
             </div>
