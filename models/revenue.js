@@ -21,7 +21,7 @@ const revenueSchema = new Schema({
   },
   price: {
     type: String,
-    required: true
+    default: "0.00"
   }
 });
 
