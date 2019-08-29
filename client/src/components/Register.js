@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {firebaseApp,users} from '../Firebase';
-const firebase = require('firebase/app');
-require('firebase/firebase');
+// const firebase = require('firebase/app');
+// require('firebase/firebase');
 
 class Register extends Component {
 

@@ -1,8 +1,8 @@
 
 import React, {Component} from 'react';
 import {firebaseApp} from '../Firebase';
-const firebase = require('firebase/app');
-require('firebase/firebase');
+// const firebase = require('firebase/app');
+// require('firebase/firebase');
 
 class Login extends Component {
 
