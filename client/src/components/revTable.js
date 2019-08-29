@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RevField from "./revField";
 import API from "../utils/API";
+import axios from "axios";
 
 class RevTable extends Component {
   constructor() {
@@ -31,7 +32,8 @@ class RevTable extends Component {
   };
 
   componentDidMount() {
-    fetch("/api/revenue")
+    axios
+      .get("/api/revenue")
       .then(results => {
         // console.log(results);
         return results.json();
