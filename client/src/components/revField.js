@@ -17,8 +17,21 @@ function RevField(props) {
       </td>
       <td>
         <input
+          type="checkbox"
+          onChange={props.handleInputChange("completed", props.dataIndex)}
+          checked={props.completed}
+        />
+      </td>
+      <td>
+        <textarea
           onChange={props.handleInputChange("task", props.dataIndex)}
           value={props.task}
+        />
+      </td>
+      <td>
+        <input
+          onChange={props.handleInputChange("price", props.dataIndex)}
+          value={props.price}
         />
       </td>
     </tr>
