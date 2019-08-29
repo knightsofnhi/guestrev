@@ -3,8 +3,8 @@ import React from "react";
 function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/login">
-        GuestRev Login
+      <a className="navbar-brand" href="/">
+        Operations Console
       </a>
     </nav>
   );

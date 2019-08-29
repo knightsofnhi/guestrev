@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 import RevTable from "../src/components/revTable";
 import "./App.css";
-
+import NavBar from "../src/components/navBar";
 
 class App extends Component {
   render() {
@@ -13,6 +13,8 @@ class App extends Component {
         className="App-logo" alt="logo" />
           <h2>Welcome to Guestrev</h2>
         </div>
+
+        <NavBar/>
         <RevTable/>
          
 
