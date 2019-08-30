@@ -2,8 +2,6 @@
 import React, {Component} from 'react';
 import {usersWishlist} from '../Firebase';
 import RevTable from './revTable';
-// const firebase = require('firebase/app');
-// require('firebase/firebase');
 
 class Dashboard extends Component {
 
