@@ -40,7 +40,7 @@ class App extends Component {
     logout = ()=> {
         firebaseApp.auth().signOut();
     }
-
+//testing
     componentWillUnmount() {
         this.removeFirebaseEvent()
     }
