@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const cors = require("cors");
 
-// Define middleware here
+// Define middlenpware here
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
