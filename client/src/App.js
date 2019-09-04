@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import RevTable from "../src/components/revTable";
 import "./App.css";
 import NavBar from "../src/components/navBar";
-import logo from './logo.svg';
+import logo from './cendyn logo.jpg';
 import {HashRouter, Route, Link, Redirect} from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
