@@ -82,8 +82,13 @@ class App extends Component {
                     </nav>
                     {!this.state.authed ? <div className="container"><h3><Link to="/login" className="navbar-brand">Login</Link></h3>
                         <hr/>
-                        {/* <h3> Please register if you are not registered to use the app.</h3> */}
+                      
                     </div> : ''}
+
+                    <h4>Please contact us to register as Admin or to reset password.</h4>
+                    <hr/>
+                   
+                    
                     <div>
                         <Route path='/' render={()=>this.state.authed ? <Redirect to='/dashboard'/> : <div></div>}/>
                         <Route path='/login' render={()=>this.state.authed ? <Redirect to='/dashboard'/> : <Login/>}/>
