@@ -18,7 +18,7 @@ function RevField(props) {
       </td>
       <td>
         <input
-          type="checkbox" style={{margin: 'auto'}}
+          type="checkbox" className="checkbox"
           onChange={props.handleInputChange("completed", props.dataIndex)}
           checked={props.completed}
         />
