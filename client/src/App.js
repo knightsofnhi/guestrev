@@ -10,6 +10,7 @@ import {firebaseApp} from './Firebase';
 import Dashboard from './components/Dashboard';
 
 class App extends Component {
+
     constructor() {
         super();
         this.state = {
@@ -47,39 +48,47 @@ class App extends Component {
 
     render() {
         return (
-         
             <HashRouter>
                 <div className="App">
                     <div className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
-                        <h2>GuestRev - Operations Monitoring Tool</h2>
+                        <h2>Cendyn - Operations Monitoring Tool</h2>
                     </div>
 
                     <nav className="navbar navbar-default navbar-static-top">
                         <div className="container">
 
-                            <ul className="nav navbar-nav pull-right">
+                            <ul className="nav navbar-nav">
 
+                            <h1>Welcome Admin</h1>
+{/* 
                                 <li>
                                     <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     {this.state.authed
-                                        ? <button
+                                        ? <div className="container">
+                                        <button
                                         style={{border: 'none', background: 'transparent'}}
                                         className="navbar-brand" onClick={this.logout}>Logout</button>
+                                        </div>
                                         : <span>
-                        <Link to="/login" className="navbar-brand">Login</Link>
-                        <Link to="/register" className="navbar-brand">Register</Link>
+                        {/* <Link to="/login" className="navbar-brand">Login</Link> */}
+                        {/* <Link to="/register" className="navbar-brand">Register</Link> */}
                       </span>}
                                 </li>
                             </ul>
                         </div>
                     </nav>
-                    {!this.state.authed ? <div className="container"><h3>Please login if you are existing user.</h3>
+                    {!this.state.authed ? <div className="container"><h3><Link to="/login" className="navbar-brand">Login</Link></h3>
                         <hr/>
-                        <h3> Please register if you are not registered to use the app.</h3>
+                      
                     </div> : ''}
+
+                    <h4>Please contact us to register as Admin or to reset password.</h4>
+                    <hr/>
+                   
+                    
                     <div>
                         <Route path='/' render={()=>this.state.authed ? <Redirect to='/dashboard'/> : <div></div>}/>
                         <Route path='/login' render={()=>this.state.authed ? <Redirect to='/dashboard'/> : <Login/>}/>

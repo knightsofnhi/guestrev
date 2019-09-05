@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {firebaseApp} from '../Firebase';
+import "../style/login.css";
 // const firebase = require('firebase/app');
 // require('firebase/firebase');
 
@@ -42,7 +43,11 @@ class Login extends Component {
                     />
 
 
+<<<<<<< HEAD
                     <button className="btn btn-primary" style={{margin: '30px'}} onClick={this.login}>Login</button>
+=======
+                    <button className="btn btn-primary" style={{margin: '30px'}} onClick={this.login}>Submit</button>
+>>>>>>> 44b5c600a7139040c9b15e4b45053206a59d04c2
 
                 </div>
             </div>
