@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../style/revField.css";
 
 function RevField(props) {
   return (
@@ -21,9 +22,10 @@ function RevField(props) {
           onChange={props.handleInputChange("completed", props.dataIndex)}
           checked={props.completed}
         />
+
       </td>
       <td>
-        <textarea
+        <input
           onChange={props.handleInputChange("task", props.dataIndex)}
           value={props.task}
         />

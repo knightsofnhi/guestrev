@@ -5,6 +5,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "mdbreact": "^4.19.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^7.1.0",

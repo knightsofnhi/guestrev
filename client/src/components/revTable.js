@@ -77,7 +77,10 @@ class RevTable extends Component {
             }
           )}
         </tbody>
-        <input type="submit" value="Update Data" onClick={this.updateData} />
+
+        <input type="submit" button className="btn btn-primary" 
+        style={{margin:'10px'}} value="Update Data" onClick={this.updateData} />
+        
         
       </table>
     );
