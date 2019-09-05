@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {firebaseApp} from '../Firebase';
+import "../style/login.css";
 // const firebase = require('firebase/app');
 // require('firebase/firebase');
 
@@ -31,18 +32,18 @@ class Login extends Component {
                     <input type="text"
                            placeholder="Enter Email"
                            className="form-control"
-                           style={{margin: '10px'}}
+                           style={{margin: '30px'}}
                            onChange={({target})=>this.setState({email: target.value})}
                     />
                     <input type="password"
                            placeholder="Enter Password"
                            className="form-control"
-                           style={{margin: '10px'}}
+                           style={{margin: '30px'}}
                            onChange={({target})=>this.setState({password: target.value})}
                     />
 
 
-                    <button className="btn btn-primary" style={{margin: '10px'}} onClick={this.login}>Login</button>
+                    <button className="btn btn-primary" style={{margin: '30px'}} onClick={this.login}>Submit</button>
 
                 </div>
             </div>

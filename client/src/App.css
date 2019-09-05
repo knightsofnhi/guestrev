@@ -1,5 +1,19 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-image: url("./images/cool-background.png");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 1400px 1200px;
+  background-attachment: scroll;
+}
+
+.navbar-nav {
+  /* text-align: center; */
+  color: black;
+}
+
+.navbar-brand {
+  color: black;
 }
 
 .App-logo {
@@ -7,11 +21,12 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: rgb(255, 255, 255);
+.App-header { 
+  background-color: white;
+  font-family: 'Coda';
   height: 150px;
   padding: 20px;
-  color: red;
+  color: black;
 }
 
 .App-intro {
