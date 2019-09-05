@@ -7,7 +7,7 @@ The whole process is confidential and includes...
    - custom plan
    - product creation
    - secure configuration
-   - customer support
+   - product support
 
 Example: Cendyn - Operations Monitoring Tool
 
