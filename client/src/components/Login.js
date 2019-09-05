@@ -42,12 +42,7 @@ class Login extends Component {
                            onChange={({target})=>this.setState({password: target.value})}
                     />
 
-
-<<<<<<< HEAD
-                    <button className="btn btn-primary" style={{margin: '30px'}} onClick={this.login}>Login</button>
-=======
                     <button className="btn btn-primary" style={{margin: '30px'}} onClick={this.login}>Submit</button>
->>>>>>> 44b5c600a7139040c9b15e4b45053206a59d04c2
 
                 </div>
             </div>
