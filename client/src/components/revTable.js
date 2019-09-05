@@ -51,6 +51,7 @@ class RevTable extends Component {
       <table className="table">
         <thead className="thead-dark">
           <tr>
+            {/* <th scope="col">ID</th> */}
             <th scope="col">Company</th>
             <th scope="col">Property</th>
             <th scope="col">Completed?</th>
@@ -77,6 +78,7 @@ class RevTable extends Component {
           )}
         </tbody>
         <input type="submit" value="Update Data" onClick={this.updateData} />
+        
       </table>
     );
   }
