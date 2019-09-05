@@ -54,7 +54,7 @@ class RevTable extends Component {
             {/* <th scope="col">ID</th> */}
             <th scope="col">Company</th>
             <th scope="col">Property</th>
-            <th scope="col">Completed?</th>
+            <th scope="col">Completed [?]</th>
             <th scope="col">Task</th>
             <th scope="col">Price</th>
           </tr>
@@ -79,8 +79,9 @@ class RevTable extends Component {
         </tbody>
 
         <input type="submit" button className="btn btn-primary" 
-        style={{margin:'10px'}} value="Update Data" onClick={this.updateData}/>
-        
+        style={{margin:'10px'}} value="Update Data" onClick={this.updateData}
+        />
+
         
       </table>
     );
