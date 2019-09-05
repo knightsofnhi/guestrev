@@ -1,0 +1,11 @@
+.py-3 {
+    background-image: url("../images/white-moving.png");
+    /* font-family: Arial, Helvetica, sans-serif; */
+    height: 250px;
+    padding: 10px;
+    color: black;
+}
+
+.footer-copyright {
+    margin-bottom: bottom;
+}

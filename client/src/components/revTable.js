@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RevField from "./revField";
 import API from "../utils/API";
+import "../style/revTable.css";
 
 class RevTable extends Component {
   constructor() {
@@ -78,12 +79,12 @@ class RevTable extends Component {
           )}
         </tbody>
 
-        <input type="submit" button className="btn btn-primary" 
+        <input type="submit" button className="btn btn-primary"
         style={{margin:'10px'}} value="Update Data" onClick={this.updateData}
         />
-
         
       </table>
+      
     );
   }
 }

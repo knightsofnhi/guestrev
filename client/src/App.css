@@ -1,3 +1,4 @@
+
 .App {
   /* text-align: center; */
   background-image: url("./images/cool-background.png");
@@ -7,13 +8,24 @@
   background-attachment: scroll;
 }
 
+.hr {
+  align-content: center;
+}
+
+.tag {
+  color:white;
+  text-shadow: rgb(11, 51, 63) 1px 0 10px;
+}
+
 .navbar-nav {
   /* text-align: center; */
   color: black;
+  text-shadow: rgb(226, 148, 134) 1px 0 10px;
 }
 
 .navbar-brand {
   color: black;
+  text-shadow: rgb(226, 148, 134) 1px 0 10px
 }
 
 .App-logo {

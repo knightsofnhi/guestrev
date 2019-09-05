@@ -8,7 +8,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import {firebaseApp} from './Firebase';
 import Dashboard from './components/Dashboard';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 class App extends Component {
 
@@ -53,7 +54,7 @@ class App extends Component {
                 <div className="App">
                     <div className="App-header">
                         <img src={logo} className="App-logo" alt="logo"/>
-                        <h2>Cendyn - Operations Monitoring Tool</h2>
+                        <h2>GuestRevPro - Operations Monitoring Tool</h2>
                     </div>
 
                     <nav className="navbar navbar-default navbar-static-top">
@@ -82,11 +83,11 @@ class App extends Component {
                         </div>
                     </nav>
                     {!this.state.authed ? <div className="container"><h3><Link to="/login" className="navbar-brand">Login</Link></h3>
-                        <hr/>
+                    {/* <hr/> */}
                       
                     </div> : ''}
-
-                    <h4>Please contact us to register as Admin or to reset password.</h4>
+                    <hr/>
+                    <Contact/>
                     <hr/>
                    
                     
@@ -101,7 +102,7 @@ class App extends Component {
                     </div>
    
                 </div>
-                {/* <Footer /> */}
+                <Footer />
             </HashRouter>
         );
     }
