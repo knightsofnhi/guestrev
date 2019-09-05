@@ -9,6 +9,7 @@ import Register from './components/Register';
 import {firebaseApp} from './Firebase';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 class App extends Component {
 
@@ -82,11 +83,11 @@ class App extends Component {
                         </div>
                     </nav>
                     {!this.state.authed ? <div className="container"><h3><Link to="/login" className="navbar-brand">Login</Link></h3>
-                        <hr/>
+                    {/* <hr/> */}
                       
                     </div> : ''}
-
-                    <div className="tag"><h4>Please contact us to register as Admin or to reset password.</h4></div>
+                    <hr/>
+                    <Contact/>
                     <hr/>
                    
                     
