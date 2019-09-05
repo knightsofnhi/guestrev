@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {firebaseApp} from '../Firebase';
 import "../style/login.css";
+// import Footer from './Footer';
 // const firebase = require('firebase/app');
 // require('firebase/firebase');
 

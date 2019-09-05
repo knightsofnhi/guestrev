@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import {firebaseApp} from './Firebase';
 import Dashboard from './components/Dashboard';
+// import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -98,8 +99,9 @@ class App extends Component {
                                    <Redirect to='/login'/>} />
                         <Route path='/register' component={Register}/>
                     </div>
-
+   
                 </div>
+                {/* <Footer /> */}
             </HashRouter>
         );
     }
