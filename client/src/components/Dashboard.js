@@ -67,6 +67,7 @@ class Dashboard extends Component {
 
             <div className="container" style={{margin: '5%'}}>
                 <div className="row">
+             
                     {/* <div className="col-md-6">
                         <div className="form-group">
                             <input className="form-control"
