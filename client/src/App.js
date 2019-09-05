@@ -8,7 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import {firebaseApp} from './Firebase';
 import Dashboard from './components/Dashboard';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -86,7 +86,7 @@ class App extends Component {
                       
                     </div> : ''}
 
-                    <h4>Please contact us to register as Admin or to reset password.</h4>
+                    <div className="tag"><h4>Please contact us to register as Admin or to reset password.</h4></div>
                     <hr/>
                    
                     
@@ -101,7 +101,7 @@ class App extends Component {
                     </div>
    
                 </div>
-                {/* <Footer /> */}
+                <Footer />
             </HashRouter>
         );
     }
