@@ -5,6 +5,10 @@ const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const cors = require("cors");
+const StatsD = require('node-dogstatsd').StatsD;
+const dogstatsd = new StatsD();
+
+dogstatsd.increment('page.views')
 
 // Define middlenpware here
 app.use(cors());
