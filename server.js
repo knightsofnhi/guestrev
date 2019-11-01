@@ -1,3 +1,4 @@
+const tracer = require('dd-trace').init()
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -5,6 +6,10 @@ const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const cors = require("cors");
+const StatsD = require('node-dogstatsd').StatsD;
+const dogstatsd = new StatsD();
+
+dogstatsd.increment('page.views')
 
 // Define middlenpware here
 app.use(cors());
